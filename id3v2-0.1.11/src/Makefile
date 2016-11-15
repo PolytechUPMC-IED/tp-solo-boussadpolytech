@@ -30,5 +30,5 @@ distclean: $(INS) clean
 	rm -f $(INS)/man/man1/id3v2.1
 
 
-# export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/sasl/shared/main/env/tools/lib
+# export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/sasl/shared/main3/env/tools/lib
 # export PATH=$PATH:~/Informatique/TP_solo/bin
