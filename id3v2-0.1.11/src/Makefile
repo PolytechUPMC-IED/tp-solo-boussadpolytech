@@ -15,7 +15,9 @@ all: id3v2
 id3v2: $(OBJ)
 	$(CC) -L $(CLIBS) -Wall $(CFLAGS) $@ $(OBJ)
 
-
-
+install:
+	
+	mkdir -p ~/Informatique/TP_solo/bin
+	cp id3v2 ~/informatique/TP_solo/bin
 clean:
 	rm -f $(OBJ) id3v2
