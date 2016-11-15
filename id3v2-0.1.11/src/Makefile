@@ -6,6 +6,9 @@ CLIBS=$(ID3)/lib
 SRC=cconvert.c list.c id3v2.c genre.c
 OBJ=$(SRC:.o=.c)
 
+
+all: id3v2
+
 .o:.c
 	$(CC) -I $(LDLIBS) -DVERSION="\"${VERSION}\"" -c $(CFLAGS) $< $@
 
