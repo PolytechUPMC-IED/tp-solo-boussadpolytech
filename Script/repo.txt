@@ -1,0 +1,3 @@
+3)l'option -L retourn la liste de tous les genre musicaux
+
+4) l'option -g permet d'ajouter genre musical
