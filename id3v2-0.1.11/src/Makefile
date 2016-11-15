@@ -32,3 +32,4 @@ distclean: $(INS) clean
 
 
 # export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/sasl/shared/main/env/tools/lib
+# export PATH=$PATH:~/Informatique/TP_solo/bin
