@@ -3,21 +3,20 @@ CC = g++
 CFLAGS= -o
 LDLIBS=$(ID3)/include
 CLIBS=$(ID3)/lib
-SRC=cconvert.c list.c id3v2.c genre.c
-OBJ=$(SRC:.o=.c)
+SRC=convert.cpp list.cpp id3v2.cpp genre.cpp
+OBJ=$(SRC:.cpp=.o)
 INS= ~/Informatique/TP_solo
 
 
-all: id3v2
+all: id3v2 install 
 
-.o:.c
-	$(CC) -I $(LDLIBS) -DVERSION="\"${VERSION}\"" -c $(CFLAGS) $< $@
+%.o:%.cpp
+	$(CC) -I $(LDLIBS) -DVERSION="\"${VERSION}\"" -c $(CFLAGS) $@ $< 
 
 id3v2: $(OBJ)
-	$(CC) -L $(CLIBS) -Wall $(CFLAGS) $@ $(OBJ)
+	$(CC) -L $(CLIBS) -Wall $(CFLAGS) $@ $(OBJ) -lid3 -lz
 
 install:
-	
 	mkdir -p $(INS)/bin
 	cp id3v2 $(INS)
 	 nroff ../id3v2.1 > $(INS)/man/man1/id3v2.1
