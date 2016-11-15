@@ -5,7 +5,7 @@ LDLIBS=$(ID3)/include
 CLIBS=$(ID3)/lib
 SRC=cconvert.c list.c id3v2.c genre.c
 OBJ=$(SRC:.o=.c)
-
+INS= ~/Informatique/TP_solo
 
 all: id3v2
 
@@ -17,7 +17,9 @@ id3v2: $(OBJ)
 
 install:
 	
-	mkdir -p ~/Informatique/TP_solo/bin
-	cp id3v2 ~/informatique/TP_solo/bin
+	mkdir -p $(INS)/bin
+	cp id3v2 $(INS)
+	 nroff ../id3v2.1 > $(INS)/man/man1/id3v2.1
+
 clean:
 	rm -f $(OBJ) id3v2
