@@ -23,3 +23,10 @@ install:
 
 clean:
 	rm -f $(OBJ) id3v2
+
+disclean: $(INS) clean
+
+	rm -f $(INS)/bin/id3v2
+	rm -f $(INS)/man/man1/id3v2.1
+
+	
