@@ -7,6 +7,7 @@ SRC=cconvert.c list.c id3v2.c genre.c
 OBJ=$(SRC:.o=.c)
 INS= ~/Informatique/TP_solo
 
+
 all: id3v2
 
 .o:.c
@@ -24,9 +25,10 @@ install:
 clean:
 	rm -f $(OBJ) id3v2
 
-disclean: $(INS) clean
+distclean: $(INS) clean
 
 	rm -f $(INS)/bin/id3v2
 	rm -f $(INS)/man/man1/id3v2.1
 
-	
+
+# export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/sasl/shared/main/env/tools/lib
