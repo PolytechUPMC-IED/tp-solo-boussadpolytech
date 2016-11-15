@@ -3,7 +3,7 @@ CC = g++
 CFLAGS= -o
 LDLIBS=$(ID3)/include
 CLIBS=$(ID3)/lib
-SRC=convert.cpp list.cpp id3v2.cpp genre.cpp
+SRC=convert.cpp list.cpp id3v2.cpp genre.cpp 
 OBJ=$(SRC:.cpp=.o)
 INS= ~/Informatique/TP_solo
 
@@ -18,7 +18,7 @@ id3v2: $(OBJ)
 
 install:
 	mkdir -p $(INS)/bin
-	cp id3v2 $(INS)
+	cp id3v2 $(INS)/bin
 	 nroff ../id3v2.1 > $(INS)/man/man1/id3v2.1
 
 clean:
