@@ -14,3 +14,8 @@ all: id3v2
 
 id3v2: $(OBJ)
 	$(CC) -L $(CLIBS) -Wall $(CFLAGS) $@ $(OBJ)
+
+
+
+clean:
+	rm -f $(OBJ) id3v2
